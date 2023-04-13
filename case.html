@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100% ;
+            background: url(https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/betting-articles/e-sports/feature-articles/article-cs-go-map-pool-hero.jpg)  no-repeat  center  bottom ;   
+            -webkit-background-size: cover ;
+            background-size: cover ;
+            background-attachment: fixed;
+        }
+        img{transform:scale(1,1);transition: all 1s ease-out;}
+        img:hover{transform:scale(1.1,1.1);}
+        .container{
+            width: 15px;
+            height: 600px;
+            position: fixed;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #222;
+            border-radius: 0 15px 15px 0;
+            overflow: hidden;
+            transition: 0.3s;
+            z-index: 3;
+        }
+        .container:hover{
+            width: 130px;
+            border-radius: 0 30px 30px 0;
+        }
+        .container:hover li a{
+            color: #fff;
+        }
+        .container::before{
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .container::before{
+            left: 0;
+            background-color: lightseagreen;
+        }
+        .container .top{
+            width: calc(100% - 30px);
+            margin-left: 30px;
+            height: 20%;
+            background-color: #222;
+            border-radius: 0 0 0 20px;
+            transition: 0.2s;
+        }
+        .container .middle{
+            width: calc(100% - 60px);
+            height: 10%;
+            background-color: lightseagreen;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+        .container .bottom{
+            width: calc(100% - 30px);
+            height: 100%;
+            margin-left: 30px;
+            background-color: #222;
+            border-radius: 20px 0 0 0;
+        }
+        .container li{
+            position: absolute;
+            top: var(--t);
+            width: 100%;
+            height: 10%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container li a{
+            color: transparent;
+            transition: 0.3s;
+        }
+        .container li:nth-child(1):hover ~ .top{
+            height: 10%;
+        }
+        .container li:nth-child(2):hover ~ .top{
+            height: 20%;
+        }
+        .container li:nth-child(3):hover ~ .top{
+            height: 30%;
+        }
+        .container li:nth-child(4):hover ~ .top{
+            height: 40%;
+        }
+        .container li:nth-child(5):hover ~ .top{
+            height: 50%;
+        }
+        .container li:nth-child(6):hover ~ .top{
+            height: 60%;
+        }
+        .container li:nth-child(7):hover ~ .top{
+            height: 70%;
+        }
+        .container li:nth-child(8):hover ~ .top{
+            height: 80%;
+        }
+        .container li:nth-child(9):hover ~ .top{
+            height: 90%;
+        }
+        .main{
+            width: 100%;
+            height: 560px;
+            background-color: #222;
+            margin-top: -20px;
+            margin-right: -25px;
+            float: right;
+            background-size: cover;
+            z-index: -999;
+        }
+        .main1{
+            width: 30%;
+            height: 500px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 3%;
+            margin-top: 3%;
+            float: left;
+            margin-bottom: 5%;
+        }
+        .h11{
+            color: #fff;
+            text-align: center;
+        }
+        h1{
+            color: #fff;
+            padding-top: 15%;
+        }
+        p{
+            color: #fff;
+            font-weight: bolder;
+        }
+        .img1{
+            width: 30%;
+            padding-left: 25%;
+            padding-top: 5%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li style="--t:10%;">
+            <a href="introduce.html">
+                <i class="fa fa-home" aria-hidden="true"><img src="picture/csgo.png" alt="csgo介紹"></i>
+            </a>
+        </li>
+        <li style="--t:20%;">
+            <a href="map.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"><img src="picture/map.png" alt="地圖"></i>
+            </a>
+        </li>
+        <li style="--t:30%;">
+            <a href="people.html">
+                <i class="fa fa-th-large" aria-hidden="true"><img src="picture/people.png" alt="c & ct"></i>
+            </a>
+        </li>
+        <li style="--t:40%;">
+            <a href="rank.html">
+                <i class="fa fa-user" aria-hidden="true"><img src="picture/rank.png" alt="休閒競技rank"></i>
+            </a>
+        </li>
+        <li style="--t:50%;">
+            <a href="site.html">
+                <i class="fa fa-cog" aria-hidden="true"><img src="picture/site.png" alt="AB包點"></i>
+            </a>
+        </li>
+        <li style="--t:60%;">
+            <a href="tools.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/tools.png" alt="道具介紹"></i>
+            </a>
+        </li>
+        <li style="--t:70%;">
+            <a href="index.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/index.png" alt="index"></i>
+            </a>
+        </li>
+        <li style="--t:80%;">
+            <a href="music.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/music.png" alt="音樂盒"></i>
+            </a>
+        </li>
+        <li style="--t:90%;">
+            <a href="skin.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/skin.png" alt="skin"></i>
+            </a>
+        </li>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+    <div class="main">
+        <img class="img1" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsRVx4MwFo5_T3eAQ3i6DMIW0X7ojiwoHax6egMOKGxj4G68Nz3-jCp4itjFWx-ktqfSmtcwqVx6sT/330x192" alt="">
+        <h1>Case & Anothor Product</h1>
+        <p>以上皆為噱錢的產品，本人買了100箱左右，完全沒金謝謝</p>
+    </div>
+
+    <div class="main1 h11"> 
+        <img src="" alt="">
+        <h1>箱子</h1>
+        <a href="https://www.youtube.com/watch?v=1zmUCSw0M_A"><img style="width: 300px;" src="https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFQxnaecIT8Wv9rilYTYkfTyNuiFwmhUvpZz3-2Z9oqg0Vew80NvZzuiJdeLMlhpwFO-XdA/256fx256f" alt=""></a>
+    </div>
+
+    <div class="main1 h11"> 
+        <img src="" alt="">
+        <h1>貼紙扭蛋</h1>
+        <a href="https://www.youtube.com/watch?v=1zmUCSw0M_A"><img style="width: 300px;" src="https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsQEl9Jg9SpIW1KgRr7PDbI219792mh5WHkrn1NeLTwTxSu8QmiLvEptumiwW1rRE-MGD1JI_AIAA7ZliCqAS9wOzsm9bi65vhLWPP/360fx360f" alt=""></a>
+    </div>
+
+    <div class="main1 h11"> 
+        <img src="" alt="">
+        <h1>紀念包</h1>
+        <a href="https://www.youtube.com/watch?v=1zmUCSw0M_A"><img style="width: 330px; padding-top: 2%;" src="https://www.csgola.com/Public/img/csgo_souvenir/crate_berlin2019_promo_de_vertigo.png" alt=""></a>
+    </div>
+
+    <div class="main1 h11"> 
+        <img src="" alt="">
+        <h1>補丁</h1>
+        <a href="https://www.youtube.com/watch?v=1zmUCSw0M_A"><img style="width: 300px;" src="https://wiki.swapskins.com/storage/patches-packs/img/stockholm-2021-contenders-patch-pack.png" alt=""></a>
+    </div>
+
+    <div class="main1 h11"> 
+        <img src="" alt="">
+        <h1>探員</h1>
+        <a href="https://www.youtube.com/watch?v=1zmUCSw0M_A"><img style="width: 180px;" src="https://cdn.akamai.steamstatic.com/apps/csgo/images/operationshatteredweb/slingshot.png" alt=""></a>
+    </div>
+
+    <div class="main1 h11"> 
+        <img src="" alt="">
+        <h1>Coin</h1>
+        <a href="https://www.youtube.com/watch?v=1zmUCSw0M_A"><img style="width: 300px;" src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/4/4d4b38245d33f15b2b631d0eaccd6522860f50d9.png" alt=""></a>
+    </div>
+</body>
+</html>

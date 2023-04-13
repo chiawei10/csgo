@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>道具介紹</title>
+    <style>
+            body{
+            height: 100% ;
+            background: url(https://cdnmedia.webthethao.vn/uploads/2023-03-05/csgo-2.jpg)  no-repeat  center ;
+            -webkit-background-size: cover ;
+            background-size: cover ;
+            background-attachment: fixed;
+            }
+
+        .pic{width:500px; height:350px;overflow:hidden;}
+        .img1{transform:scale(1,1);transition: all 1s ease-out;}
+        .img1:hover{transform:scale(1.2,1.2);}
+        .container{
+            width: 15px;
+            height: 600px;
+            position: fixed;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #222;
+            border-radius: 0 15px 15px 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .container:hover{
+            width: 130px;
+            border-radius: 0 30px 30px 0;
+        }
+        .container:hover li a{
+            color: #fff;
+        }
+        .container::before{
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .container::before{
+            left: 0;
+            background-color: lightseagreen;
+        }
+        .container .top{
+            width: calc(100% - 30px);
+            margin-left: 30px;
+            height: 20%;
+            background-color: #222;
+            border-radius: 0 0 0 20px;
+            transition: 0.2s;
+        }
+        .container .middle{
+            width: calc(100% - 60px);
+            height: 10%;
+            background-color: lightseagreen;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+        .container .bottom{
+            width: calc(100% - 30px);
+            height: 100%;
+            margin-left: 30px;
+            background-color: #222;
+            border-radius: 20px 0 0 0;
+        }
+        .container li{
+            position: absolute;
+            top: var(--t);
+            width: 100%;
+            height: 10%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container li a{
+            color: transparent;
+            transition: 0.3s;
+        }
+        .container li:nth-child(1):hover ~ .top{
+            height: 10%;
+        }
+        .container li:nth-child(2):hover ~ .top{
+            height: 20%;
+        }
+        .container li:nth-child(3):hover ~ .top{
+            height: 30%;
+        }
+        .container li:nth-child(4):hover ~ .top{
+            height: 40%;
+        }
+        .container li:nth-child(5):hover ~ .top{
+            height: 50%;
+        }
+        .container li:nth-child(6):hover ~ .top{
+            height: 60%;
+        }
+        .container li:nth-child(7):hover ~ .top{
+            height: 70%;
+        }
+        .container li:nth-child(8):hover ~ .top{
+            height: 80%;
+        }
+        .container li:nth-child(9):hover ~ .top{
+            height: 90%;
+        }
+        #rightBar {
+            z-index: 9999;
+            width: 50px;
+            position: fixed;
+            right: 10px;
+            bottom: 5%;
+            height: auto;
+        }
+
+        #rightBar .btn {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        iframe{
+            float: right;
+        }
+
+        .case1{
+            width: 50%;
+            height: 2700px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 14%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            float: left;
+            box-sizing: border-box;
+        }
+        .case{
+            width: 23%;
+            height: 300px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 7%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .case3{
+            width: 23%;
+            height: 300px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 7%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            float: left;
+            box-sizing: border-box;
+            margin-bottom: 2%;
+        }
+
+        .case1:hover{
+            border: 4px solid white;
+        }
+        .casepic{
+            text-align: center;
+        }
+        h4{
+            color: white;
+            font-size: 22px;
+        }
+        .media-heading{
+            color: #000;
+        }
+        p{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+        <li style="--t:10%;">
+            <a href="introduce.html">
+                <i class="fa fa-home" aria-hidden="true"><img class="img1" src="picture/csgo.png" alt="csgo介紹"></i>
+            </a>
+        </li>
+        <li style="--t:20%;">
+            <a href="map.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"><img class="img1" src="picture/map.png" alt="地圖"></i>
+            </a>
+        </li>
+        <li style="--t:30%;">
+            <a href="people.html">
+                <i class="fa fa-th-large" aria-hidden="true"><img class="img1" src="picture/people.png" alt="c & ct"></i>
+            </a>
+        </li>
+        <li style="--t:40%;">
+            <a href="rank.html">
+                <i class="fa fa-user" aria-hidden="true"><img class="img1" src="picture/rank.png" alt="休閒競技rank"></i>
+            </a>
+        </li>
+        <li style="--t:50%;">
+            <a href="site.html">
+                <i class="fa fa-cog" aria-hidden="true"><img class="img1" src="picture/site.png" alt="AB包點"></i>
+            </a>
+        </li>
+        <li style="--t:60%;">
+            <a href="index.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img1" src="picture/index.png" alt="index"></i>
+            </a>
+        </li>
+        <li style="--t:70%;">
+            <a href="case.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img1" src="picture/case.png" alt="箱子介紹"></i>
+            </a>
+        </li>
+        <li style="--t:80%;">
+            <a href="music.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img1" src="picture/music.png" alt="音樂盒"></i>
+            </a>
+        </li>
+        <li style="--t:90%;">
+            <a href="skin.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img1" src="picture/skin.png" alt="skin"></i>
+            </a>
+        </li>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+    <div id="rightBar">
+        <div class="btn" id="shougongBtn"><span><a href=
+        "javascript:%20window.scrollTo(0,%200);"><img src="https://hosting.url.com.tw/img/go-top.png" /></a></span></div>
+    </div>
+
+
+    <div class="case1" data-musicind="68">
+        <center><h4>煙霧彈</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; height: 220px; float: left; padding-left: 5%; left: 50%;" src="https://qianp.com/uploads/images/kind/20220819/20220819165520_10453.png" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="padding-top: 3%; height: 200px; font-weight: bolder;">
+            煙霧彈的爆炸主要和煙霧彈的速度有關，<br>
+            如果煙霧彈停下來就會爆開，<br>
+            因此煙霧可以飛很遠。<br>
+            每次彈牆都會損失一部分動能，<br>
+            所以一般彈3~8次就會爆開。<br>
+            一些有趣的影片裡可以看到煙霧投擲出去後<br>
+            撞在玩家身體上停住直接爆開就是這個原理。<br>
+            </p>
+        <center><h4>散光彈</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; float: left; padding-left: 5%; left: 50%;" src="https://static.wikia.nocookie.net/cswikia/images/f/f3/Flashbanghud_csgo.png/revision/latest?cb=20211113165814" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="padding-top: 3%; height: 220px; line-height: 2em; font-weight: bolder;">
+            閃光彈的爆炸和扔出的時間有關。<br>
+            閃光彈不僅有致盲（白屏）的效果，<br>
+            還有震撼（高頻聲音和短暫的屏幕閃爍）的效果。<br>
+            閃白的效果主要和距離有關，<br>
+            距離越遠效果越差。<br>
+        </p>
+        <center><h4>手雷</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; float: left; padding-left: 5%; left: 50%;" src="https://qianp.com/uploads/images/kind/20220819/20220819165058_13198.png" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="height: 220px; line-height: 2em; font-weight: bolder;">
+            和閃光一樣，手雷的爆炸也和扔出的時間有關。<br>
+            手雷不僅有傷害效果，<br>
+            也有耳鳴（持續的高頻聲音）的效果。<br>
+            手雷造成的傷害和護甲有關：無甲＞半甲＞全甲。<br>
+            手雷對無甲的敵人有可能造成秒殺，<br>
+            我在多個視頻中有看到，<br>
+            但是我自己單機試了不少次只能炸98。<br>
+        </p>
+        <center><h4>燃燒彈</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; float: left; padding-left: 5%; left: 50%;" src="https://qianp.com/uploads/images/kind/20220819/20220819163509_56946.png" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="height: 300px; line-height: 3em; font-weight: bolder;">
+            燃燒彈的爆炸和是否碰到地面有關，<br>
+            如果飛行一段時間還沒爆開，<br>
+            就會爆炸，如果爆炸的範圍包括了地面，<br>
+            才有燃燒的效果，<br>
+            否則就只是空爆（相當於花錢聽個響）。<br>
+        </p>
+        <div class="casepic">
+        <center><h4>誘餌彈</h4></center>
+            <img style="height: 50%; width: 300px; float: left; padding-left: 5%; left: 50%;" src="https://qianp.com/uploads/images/kind/20220819/20220819164015_49394.png" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="height: 220px; line-height: 3em; font-weight: bolder;">
+            誘餌彈得像閃光，<br>
+            彈牆聲音同閃光的声音，<br>
+            但是爆炸却和煙雾一樣（完全停下来）。<br>
+            誘餌彈對無甲敵人能造成小於5點的傷害。<br>
+        </p>
+        <center><h4>包</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; float: left; padding-left: 5%; left: 50%;" src="https://oss.stmbuy.com/static/image/game/730/174c61dca1353855.png" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="height: 220px; line-height: 3em; font-weight: bolder; padding-top: 2%;">
+            匪負責安裝炸彈<br>
+            警負責拆除炸彈<br>
+            決定輸贏的其中一個因素<br>
+        </p>
+        <center><h4>拆彈器</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; float: left; padding-left: 5%; left: 50%;" src="https://static.wikia.nocookie.net/cswikia/images/8/8d/Defuserhud_csgo.png/revision/latest?cb=20221120005231" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="height: 220px; line-height: 3em; font-weight: bolder; padding-top: 2%;">
+            警負責拆除炸彈<br>
+            而拆彈器能加速拆除炸彈<br>
+            決定輸贏的其中一個因素<br>
+        </p>
+        <center><h4>電擊槍</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; float: left; padding-left: 5%; left: 50%;" src="https://static.wikia.nocookie.net/cswikia/images/3/32/Taserhud.png/revision/latest?cb=20211030161644" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <p style="height: 200px; line-height: 3em; font-weight: bolder; padding-top: 2%;">
+            老六的最愛<br>
+            能使人退遊的一把主武器
+        </p>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Smoke</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; height: 200px;" src="https://thumbs.gfycat.com/AcademicImperturbableFrillneckedlizard-size_restricted.gif" data-ll-status="loaded">
+        </div>
+    </div>
+
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Flash</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px; height: 200px;" src="https://media.tenor.com/363dCzf9iuUAAAAC/csgo-counter-strike.gif" data-ll-status="loaded">
+        </div>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Grenade</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px;" src="https://thumbs.gfycat.com/IncompleteUnfitAnole-size_restricted.gif" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Molotov</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px;" src="https://thumbs.gfycat.com/GreenSilentBagworm-max-1mb.gif" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">FlashBang</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px;" src="https://www.csgo.com.cn/gif/161118/10691479436763632.gif" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+    </div>
+
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Bomb</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px;" src="https://thumbs.gfycat.com/HealthyRightChital-size_restricted.gif" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">kit</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px;" src="https://i.gifer.com/4Q0V.gif" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+    </div>
+    
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Zues</h4></center>
+        <div class="casepic">
+            <img style="height: 50%; width: 300px;" src="https://i.makeagif.com/media/2-03-2016/ouGdtS.gif" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+    </div>
+</body>
+</html>

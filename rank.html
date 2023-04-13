@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSGO Rank</title>
+    <style>
+        body{
+            height: 100% ;
+            background: url(https://static.wikia.nocookie.net/csgo-wikia/images/6/60/Thumb.jpg/revision/latest?cb=20190523104716&path-prefix=fr)  no-repeat  center  bottom ;   
+            -webkit-background-size: cover ;
+            background-size: cover ;
+            background-attachment: fixed;
+        }
+        img{transform:scale(1,1);transition: all 1s ease-out;}
+        img:hover{transform:scale(1.1,1.1);}
+        .container{
+            width: 15px;
+            height: 600px;
+            position: fixed;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #222;
+            border-radius: 0 15px 15px 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .container:hover{
+            width: 130px;
+            border-radius: 0 30px 30px 0;
+        }
+        .container:hover li a{
+            color: #fff;
+        }
+        .container::before{
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .container::before{
+            left: 0;
+            background-color: lightseagreen;
+        }
+        .container .top{
+            width: calc(100% - 30px);
+            margin-left: 30px;
+            height: 20%;
+            background-color: #222;
+            border-radius: 0 0 0 20px;
+            transition: 0.2s;
+        }
+        .container .middle{
+            width: calc(100% - 60px);
+            height: 10%;
+            background-color: lightseagreen;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+        .container .bottom{
+            width: calc(100% - 30px);
+            height: 100%;
+            margin-left: 30px;
+            background-color: #222;
+            border-radius: 20px 0 0 0;
+        }
+        .container li{
+            position: absolute;
+            top: var(--t);
+            width: 100%;
+            height: 10%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container li a{
+            color: transparent;
+            transition: 0.3s;
+        }
+        .container li:nth-child(1):hover ~ .top{
+            height: 10%;
+        }
+        .container li:nth-child(2):hover ~ .top{
+            height: 20%;
+        }
+        .container li:nth-child(3):hover ~ .top{
+            height: 30%;
+        }
+        .container li:nth-child(4):hover ~ .top{
+            height: 40%;
+        }
+        .container li:nth-child(5):hover ~ .top{
+            height: 50%;
+        }
+        .container li:nth-child(6):hover ~ .top{
+            height: 60%;
+        }
+        .container li:nth-child(7):hover ~ .top{
+            height: 70%;
+        }
+        .container li:nth-child(8):hover ~ .top{
+            height: 80%;
+        }
+        .container li:nth-child(9):hover ~ .top{
+            height: 90%;
+        }
+
+        .main{
+            width: 60%;
+            height: 600px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 6%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            float: left;
+        }
+
+        .main1{
+            width: 30%;
+            height: 600px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 3%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            float: left;
+            position: fixed;
+            right: 2%;
+        }
+
+        .main2{
+            width: 60%;
+            height: 100px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 6%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            float: left;
+            margin-bottom: 5%;
+        }
+
+        h1{
+            text-align: center;
+            color: #fff;
+
+        }
+
+        .img1{
+            width: 60%;
+            padding-left: 5%;
+            float: left;
+            padding-top: 4%;
+        }
+        .p5{
+            padding-top: 17%;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bolder;
+        }
+        .p1{
+            padding-top: 29%;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bolder;
+        }
+        .p2{
+            padding-top: 23%;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bolder;
+        }
+        .img2{
+            width: 60%;
+            width: 50%;
+            padding-left: 5%;
+            float: left;
+            padding-top: 10%;
+        }
+        .img3{
+            width: 45%;
+            width: 50%;
+            padding-left: 5%;
+            float: left;
+            padding-top: 10%;
+        }
+        .img3{
+            width: 45%;
+            width: 60%;
+            padding-left: 5%;
+            float: left;
+            padding-top: 10%;
+        }
+        .p4{
+            font-size: 14.5px;
+            font-weight: bolder;
+            width: 30%;
+            float: left;
+            padding-left: 7%;
+            line-height: 3em;
+            padding-top: 7%;
+        }
+        a{
+            color: #fff;
+        }
+        a:hover{
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li style="--t:10%;">
+            <a href="introduce.html">
+                <i class="fa fa-home" aria-hidden="true"><img src="picture/csgo.png" alt="csgo介紹"></i>
+            </a>
+        </li>
+        <li style="--t:20%;">
+            <a href="map.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"><img src="picture/map.png" alt="地圖"></i>
+            </a>
+        </li>
+        <li style="--t:30%;">
+            <a href="people.html">
+                <i class="fa fa-th-large" aria-hidden="true"><img src="picture/people.png" alt="c & ct"></i>
+            </a>
+        </li>
+        <li style="--t:40%;">
+            <a href="index.html">
+                <i class="fa fa-user" aria-hidden="true"><img src="picture/index.png" alt="index"></i>
+            </a>
+        </li>
+        <li style="--t:50%;">
+            <a href="site.html">
+                <i class="fa fa-cog" aria-hidden="true"><img src="picture/site.png" alt="AB包點"></i>
+            </a>
+        </li>
+        <li style="--t:60%;">
+            <a href="tools.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/tools.png" alt="道具介紹"></i>
+            </a>
+        </li>
+        <li style="--t:70%;">
+            <a href="case.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/case.png" alt="箱子介紹"></i>
+            </a>
+        </li>
+        <li style="--t:80%;">
+            <a href="music.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/music.png" alt="音樂盒"></i>
+            </a>
+        </li>
+        <li style="--t:90%;">
+            <a href="skin.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/skin.png" alt="skin"></i>
+            </a>
+        </li>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+
+    <div class="main">
+        <h1>競技</h1>
+        <img class="img2" src="https://steamuserimages-a.akamaihd.net/ugc/790884425855526685/11E12F90CA3680A91FCF2C0379E39CE169D2D25E/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="">
+        <p class="p4">
+            分成rank and unrank <br>
+            差別在於競技等待時間 <br>
+            有購買優先配對會比較快 <br>
+            也享有許多福利 <br>
+            同樣的是，當還在比賽時，退出會有競技冷卻 <br>
+        </p>
+    </div>
+
+    <div class="main1">
+        <h1>Rank福利</h1>
+        <img class="img1" src="https://img.csgo.com.cn/csgo/a0/6e/a06ec31aad58e6f8fe4e8de4b7d0ce0b1527159227.jpg" alt="">
+        <center><p class="p5">掉落物品</p></center>
+        <img class="img1" src="https://img.csgo.com.cn/csgo/6e/e8/6ee88f9a1c95d40a525338f1080893211527159205.gif" alt="">
+        <center><p class="p1">觀看回放</p></center>
+        <img class="img1" src="https://n.sinaimg.cn/games/crawl/20170911/suET-fykufif4181275.bmp" alt="">
+        <center><p class="p2">查看排名與勳章</p></center>
+    </div>
+
+    <div class="main">
+        <h1>CSGO等級</h1>
+        <img class="img2" src="https://www.esports.net/wp-content/uploads/2022/04/CSGO-ranks.jpg" alt="">
+        <p class="p4">
+            CSGO一共有18個段位 <br>
+            大多數 CSGO 玩家位在Gold Nova I和MasterGuardian I之間 <br>
+            但這只是一個粗略的數字 <br>
+            在 CSGO 所有等級中向上跑是有要求的， <br>
+            但如果有足夠的時間，可以實現快速上段。 <br>
+        </p>
+    </div>
+
+    <div class="main">
+        <h1>等級</h1>
+        <img class="img2" src="https://cdn.sanity.io/images/ccckgjf9/production/c647f9696e5dd5375fe0005988217cd7e1f3952d-512x252.png?max-h=1080&max-w=1920&fit=scale&auto=format" alt="">
+        <p class="p4">
+            你不僅需要了解CSGO等級<br>
+            還需要了解等級<br>
+            雖然排名代表您在 CSGO 中的技能水平， <br>
+            但級別僅代表您投入遊戲的時間。 <br>
+            它是您遊戲時間和 XP 累積的直接指標， <br>
+            而不是您的能力。 <br>
+        </p>
+    </div>
+
+    <div class="main2">
+        <h1><a href="https://csgo.5eplay.com/data/rank/team">戰隊比賽排名</a></h1>
+    </div>
+</body>
+</html>

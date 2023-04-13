@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T & CT 人物介紹</title>
+    <style>
+        body{
+            height: 100% ;
+            background: url(https://www.p20more.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/CSGO/2020/Evergreen/2020-CSGO-Money-System/article-esports-csgo-money-system-explained-hero.jpg)  no-repeat  center  bottom ;
+            -webkit-background-size: cover ;
+            background-size: cover ;
+            background-attachment: fixed;
+        }
+        .img2{transform:scale(1,1);transition: all 1s ease-out;}
+        .img2:hover{transform:scale(1.2,1.2);}
+        .container{
+            width: 15px;
+            height: 600px;
+            position: fixed;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #222;
+            border-radius: 0 15px 15px 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .container:hover{
+            width: 130px;
+            border-radius: 0 30px 30px 0;
+        }
+        .container:hover li a{
+            color: #fff;
+        }
+        .container::before{
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .container::before{
+            left: 0;
+            background-color: lightseagreen;
+        }
+        .container .top{
+            width: calc(100% - 30px);
+            margin-left: 30px;
+            height: 20%;
+            background-color: #222;
+            border-radius: 0 0 0 20px;
+            transition: 0.2s;
+        }
+        .container .middle{
+            width: calc(100% - 60px);
+            height: 10%;
+            background-color: lightseagreen;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+        .container .bottom{
+            width: calc(100% - 30px);
+            height: 100%;
+            margin-left: 30px;
+            background-color: #222;
+            border-radius: 20px 0 0 0;
+        }
+        .container li{
+            position: absolute;
+            top: var(--t);
+            width: 100%;
+            height: 10%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container li a{
+            color: transparent;
+            transition: 0.3s;
+        }
+        .container li:nth-child(1):hover ~ .top{
+            height: 10%;
+        }
+        .container li:nth-child(2):hover ~ .top{
+            height: 20%;
+        }
+        .container li:nth-child(3):hover ~ .top{
+            height: 30%;
+        }
+        .container li:nth-child(4):hover ~ .top{
+            height: 40%;
+        }
+        .container li:nth-child(5):hover ~ .top{
+            height: 50%;
+        }
+        .container li:nth-child(6):hover ~ .top{
+            height: 60%;
+        }
+        .container li:nth-child(7):hover ~ .top{
+            height: 70%;
+        }
+        .container li:nth-child(8):hover ~ .top{
+            height: 80%;
+        }
+        .container li:nth-child(9):hover ~ .top{
+            height: 90%;
+        }
+        #rightBar {
+            z-index: 9999;
+            width: 50px;
+            position: fixed;
+            right: 10px;
+            bottom: 5%;
+            height: auto;
+        }
+
+        #rightBar .btn {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .main{
+            width: 80%;
+            height: 600px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 10%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            transform:scale(0.8);transition: all 0.5s ease-out;
+            color: white;
+            padding-top: 10px;
+        }
+        .main:hover{
+            transform:scale(0.9);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .img1{
+            float: left;
+            width: 45%;
+            padding-left: 1%;
+            padding-top: 5%;
+        }
+        .img3{
+            float: left;
+            width: 45%;
+            padding-left: 5%;
+            padding-top: 5%;
+        }
+        p{
+            float: right;
+            line-height: 2em;
+            font-size: 25px;
+            padding-top: 5%;
+            padding-right: 2%;
+        }
+        .p1{
+            float: right;
+            line-height: 2em;
+            font-size: 25px;
+            padding-top: 5%;
+            padding-right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li style="--t:10%;">
+            <a href="introduce.html">
+                <i class="fa fa-home" aria-hidden="true"><img class="img2" src="picture/csgo.png" alt="csgo介紹"></i>
+            </a>
+        </li>
+        <li style="--t:20%;">
+            <a href="map.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"><img class="img2" src="picture/map.png" alt="地圖"></i>
+            </a>
+        </li>
+        <li style="--t:30%;">
+            <a href="index.html">
+                <i class="fa fa-th-large" aria-hidden="true"><img class="img2" src="picture/index.png" alt="index"></i>
+            </a>
+        </li>
+        <li style="--t:40%;">
+            <a href="rank.html">
+                <i class="fa fa-user" aria-hidden="true"><img class="img2" src="picture/rank.png" alt="休閒競技rank"></i>
+            </a>
+        </li>
+        <li style="--t:50%;">
+            <a href="site.html">
+                <i class="fa fa-cog" aria-hidden="true"><img class="img2" src="picture/site.png" alt="AB包點"></i>
+            </a>
+        </li>
+        <li style="--t:60%;">
+            <a href="tools.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img2" src="picture/tools.png" alt="道具介紹"></i>
+            </a>
+        </li>
+        <li style="--t:70%;">
+            <a href="case.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img2" src="picture/case.png" alt="箱子介紹"></i>
+            </a>
+        </li>
+        <li style="--t:80%;">
+            <a href="music.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img2" src="picture/music.png" alt="音樂盒"></i>
+            </a>
+        </li>
+        <li style="--t:90%;">
+            <a href="skin.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img class="img2" src="picture/skin.png" alt="skin"></i>
+            </a>
+        </li>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+    <div id="rightBar">
+        <div class="btn" id="shougongBtn"><span><a href=
+        "javascript:%20window.scrollTo(0,%200);"><img src="https://hosting.url.com.tw/img/go-top.png" /></a></span></div>
+    </div>
+    <div class="main">
+        <h1>
+          蒙頭悍匪
+        </h1>
+        <img class="img1" src="https://p7.itc.cn/q_70/images03/20210309/8e1f042907b74709b9d3019ea7d6f637.gif" alt="">
+        <p>
+            T的主要任務是抵達包點下包，並且防止CT拆除炸彈<br>
+            並且在一回合的時間內安裝炸彈或殺掉所有敵人<br>
+            這通常需要戰略與團隊合作<br>
+            需要思考CT怎麼防守的一個腳色，<br>
+            在有限的時間內分配行動，更有利於贏得勝利
+        </p>
+    </div>
+
+    <div class="main">
+        <h1>
+          六子
+        </h1>
+        <img class="img3" src="https://i.kym-cdn.com/photos/images/original/001/015/023/077" alt="">
+        <p class="p1">
+            是大多數人的選擇，<br>
+            主要是拆除炸彈以及殺光敵人<br>
+            因為有位置的優勢，距離包點較近<br>
+            也有預瞄點位的優勢<br>
+            而當警不但可以做老六電人，<br>
+            打法也是較為簡單容易<br>
+        </p>
+    </div>
+</body>
+</html>

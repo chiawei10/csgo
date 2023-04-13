@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲模式</title>
+    <style>
+        body{
+            height: 100% ;
+            background: url(https://cdn.mos.cms.futurecdn.net/5zHA4DXhWdQfiyaBKXeQyg.jpg)  no-repeat  center  bottom ;
+            -webkit-background-size: cover ;
+            background-size: cover ;
+            background-attachment: fixed;
+        }
+        img{transform:scale(1,1);transition: all 1s ease-out;}
+        img:hover{transform:scale(1.1,1.1);}
+        .container{
+            width: 15px;
+            height: 600px;
+            position: fixed;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #222;
+            border-radius: 0 15px 15px 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .container:hover{
+            width: 130px;
+            border-radius: 0 30px 30px 0;
+        }
+        .container:hover li a{
+            color: #fff;
+        }
+        .container::before{
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .container::before{
+            left: 0;
+            background-color: lightseagreen;
+        }
+        .container .top{
+            width: calc(100% - 30px);
+            margin-left: 30px;
+            height: 20%;
+            background-color: #222;
+            border-radius: 0 0 0 20px;
+            transition: 0.2s;
+        }
+        .container .middle{
+            width: calc(100% - 60px);
+            height: 10%;
+            background-color: lightseagreen;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+        .container .bottom{
+            width: calc(100% - 30px);
+            height: 100%;
+            margin-left: 30px;
+            background-color: #222;
+            border-radius: 20px 0 0 0;
+        }
+        .container li{
+            position: absolute;
+            top: var(--t);
+            width: 100%;
+            height: 10%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container li a{
+            color: transparent;
+            transition: 0.3s;
+        }
+        .container li:nth-child(1):hover ~ .top{
+            height: 10%;
+        }
+        .container li:nth-child(2):hover ~ .top{
+            height: 20%;
+        }
+        .container li:nth-child(3):hover ~ .top{
+            height: 30%;
+        }
+        .container li:nth-child(4):hover ~ .top{
+            height: 40%;
+        }
+        .container li:nth-child(5):hover ~ .top{
+            height: 50%;
+        }
+        .container li:nth-child(6):hover ~ .top{
+            height: 60%;
+        }
+        .container li:nth-child(7):hover ~ .top{
+            height: 70%;
+        }
+        .container li:nth-child(8):hover ~ .top{
+            height: 80%;
+        }
+        .container li:nth-child(9):hover ~ .top{
+            height: 90%;
+        }
+        .main{
+            width: 80%;
+            height: 600px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 10%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+        }
+        h1{
+            text-align: center;
+            color: #fff;
+
+        }
+        .img1{
+            float: left;
+            width: 45%;
+            height: 400px;
+            padding-left: 5%;
+            padding-top: 5%;
+        }
+        p{
+            float: right;
+            line-height: 3em;
+            font-size: 18px;
+            padding-top: 3%;
+            padding-right: 2%;
+            color:rgba(67, 10, 10, 0.888);
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li style="--t:10%;">
+            <a href="introduce.html">
+                <i class="fa fa-home" aria-hidden="true"><img src="picture/csgo.png" alt="csgo介紹"></i>
+            </a>
+        </li>
+        <li style="--t:20%;">
+            <a href="map.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"><img src="picture/map.png" alt="地圖"></i>
+            </a>
+        </li>
+        <li style="--t:30%;">
+            <a href="people.html">
+                <i class="fa fa-th-large" aria-hidden="true"><img src="picture/people.png" alt="c & ct"></i>
+            </a>
+        </li>
+        <li style="--t:40%;">
+            <a href="rank.html">
+                <i class="fa fa-user" aria-hidden="true"><img src="picture/rank.png" alt="休閒競技rank"></i>
+            </a>
+        </li>
+        <li style="--t:50%;">
+            <a href="index.html">
+                <i class="fa fa-cog" aria-hidden="true"><img src="picture/index.png" alt="index"></i>
+            </a>
+        </li>
+        <li style="--t:60%;">
+            <a href="tools.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/tools.png" alt="道具介紹"></i>
+            </a>
+        </li>
+        <li style="--t:70%;">
+            <a href="case.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/case.png" alt="箱子介紹"></i>
+            </a>
+        </li>
+        <li style="--t:80%;">
+            <a href="music.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/music.png" alt="音樂盒"></i>
+            </a>
+        </li>
+        <li style="--t:90%;">
+            <a href="skin.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/skin.png" alt="skin"></i>
+            </a>
+        </li>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+
+    <div class="main">
+        <h1>休閒模式</h1>
+        <img class="img1" src="picture/forfun.png" alt="">
+        <p>
+            比賽自動起甲，不需要買拆包鉗，<br>
+            沒有友軍傷害，15局8勝，<br>
+            相對競技模式殺敵獎勵金額減半，子彈可穿過友軍身體。<br>
+            死亡以後還可以跟敵軍聊天（俗稱：陰間頻道）<br>
+            在休閒模式裡所有奇怪的舉動不必驚詫，<br>
+            比如有人在比賽放整首歌<br>
+        </p>
+    </div>
+
+    <div class="main">
+        <h1>競技模式</h1>
+        <img class="img1" src="https://planetagracza.pl/wp-content/uploads/2017/10/CSGO-3.jpg" alt="">
+        <p>
+            競技模式就相當於其他遊戲當中的排位賽模式5V5，<br>
+            是休閒模式的升級版，更加註重競技性。<br>
+            每回合2分鐘，一共30回合製的模式，<br>
+            15回合後雙方互換陣營並重置所有經濟，武器，裝備。<br>
+            贏1回合得1分，先得16分者為勝，15：15為平局。<br>
+            在遊戲中還需要購買防彈衣、拆包器等設備<br>
+        </p>
+    </div>
+
+    <div class="main">
+        <h1>搭檔模式</h1>
+        <img class="img1" src="https://polscygracze.pl/uploads/2016/07/csgo_terro_anti.jpg" alt="">
+        <p>
+            與競技模式類似，需要和一名好友共同組隊才可以進行遊戲。<br>
+            2V2模式調整了經濟系統，一共16局9勝，需要購買護甲和拆彈器，<br>
+            友軍傷害開啟，不可穿過隊友身體。搭檔模式的每局時間為1分30秒，<br>
+            地圖非常小，所以搭檔模式的節奏很快。初始經濟為800，<br>
+            最高經濟8000，取勝增加經濟2750，重置後經濟為2000。<br>
+            這個模式可以說一開始就是殘局，非常地緊張刺激，<br>
+            快節奏玩法更是讓人欲罷不能。<br>
+        </p>
+    </div>
+
+    <div class="main">
+        <h1>死鬥模式</h1>
+        <img class="img1" src="https://cdn.mos.cms.futurecdn.net/064a939b94f1d2d4959819efcac5e04d.jpg" alt="">
+        <p>
+            死亡競賽一共十分鐘，在比賽時間內，可以選擇自己想要的武器。<br>
+            當你被敵人擊殺時，將立刻復活，隨機出現在地圖上的某個點，<br>
+            因此死亡競賽一定要注意四面八方隨時都有可能冒出來敵人。<br>
+            遊戲中還會發放一些獎勵武器，<br>
+            使用獎勵武器殺死敵人還能獲得獎勵點數。<br>
+            比賽結束時，點數最高的玩家就是勝利者。<br>
+            死亡競賽也被成為死鬥，適合練槍法大大提升反應速度。<br>
+            
+        </p>
+    </div>
+
+    <div class="main">
+        <h1>戰爭模式</h1>
+        <img class="img1" src="https://media.criticalhit.net/2019/10/csgocase.jpg" alt="">
+        <p>
+            軍備競賽<br>
+            -殺人升級武器<br>
+            爆破模式<br>
+            -讓新手技能熟悉槍支性能。<br>
+            跳狙飛人<br>
+            只能使用SSG08（輕狙）和匕首，<br>
+            回防模式<br>
+            3個T和4個CT進行一場已經安放好包的殘局，先贏8局獲得勝利。<br>
+        </p>
+    </div>
+
+    <div class="main">
+        <h1>頭號特訓模式</h1>
+        <img class="img1" src="https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/CSGO/2020/Evergreen/2020-Danger-Zone/hero-danger-zone-csgo.jpg" alt="">
+        <p>
+            類似於絕地求生的玩法，一開始進入系統會顯示一張地圖，<br>
+            最多16名玩家在地圖上選擇降落地點，<br>
+            每個地點都有資源可以獲取，紅色標記的地圖表示已經有玩家選擇了。<br>
+            攻擊紅色箱子會有相應的武器，瞄準地上的彈夾點擊鼠標，<br>
+            一次獲得一發子彈，需要反复點擊拾取。<br>
+            TAB鍵可以看地圖上毒氣位置，B鍵打開商店，<br>
+            支付一定金額購買武器和裝備。<br>
+            無人機會將玩家購買的裝備在一定時間後投擲下來。<br>
+        </p>
+    </div>
+
+</body>
+</html>

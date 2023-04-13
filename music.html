@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>音樂盒</title>
+    <style>
+        body{
+            height: 100% ;
+            background: url(https://i0.hdslb.com/bfs/article/8c31dcb331486ef2fc02c292ac22241ab300f1dd.jpg@760w_430h_progressive.webp)  no-repeat  center  bottom ;
+            -webkit-background-size: cover ;
+            background-size: cover ;
+            background-attachment: fixed;
+        }
+        img{transform:scale(1,1);transition: all 1s ease-out;}
+        img:hover{transform:scale(1.1,1.1);}
+        .container{
+            width: 15px;
+            height: 600px;
+            position: fixed;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #222;
+            border-radius: 0 15px 15px 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .container:hover{
+            width: 130px;
+            border-radius: 0 30px 30px 0;
+        }
+        .container:hover li a{
+            color: #fff;
+        }
+        .container::before{
+            content: "";
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .container::before{
+            left: 0;
+            background-color: lightseagreen;
+        }
+        .container .top{
+            width: calc(100% - 30px);
+            margin-left: 30px;
+            height: 20%;
+            background-color: #222;
+            border-radius: 0 0 0 20px;
+            transition: 0.2s;
+        }
+        .container .middle{
+            width: calc(100% - 60px);
+            height: 10%;
+            background-color: lightseagreen;
+            margin-left: 40px;
+            border-radius: 20px;
+        }
+        .container .bottom{
+            width: calc(100% - 30px);
+            height: 100%;
+            margin-left: 30px;
+            background-color: #222;
+            border-radius: 20px 0 0 0;
+        }
+        .container li{
+            position: absolute;
+            top: var(--t);
+            width: 100%;
+            height: 10%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container li a{
+            color: transparent;
+            transition: 0.3s;
+        }
+        .container li:nth-child(1):hover ~ .top{
+            height: 10%;
+        }
+        .container li:nth-child(2):hover ~ .top{
+            height: 20%;
+        }
+        .container li:nth-child(3):hover ~ .top{
+            height: 30%;
+        }
+        .container li:nth-child(4):hover ~ .top{
+            height: 40%;
+        }
+        .container li:nth-child(5):hover ~ .top{
+            height: 50%;
+        }
+        .container li:nth-child(6):hover ~ .top{
+            height: 60%;
+        }
+        .container li:nth-child(7):hover ~ .top{
+            height: 70%;
+        }
+        .container li:nth-child(8):hover ~ .top{
+            height: 80%;
+        }
+        .container li:nth-child(9):hover ~ .top{
+            height: 90%;
+        }
+        .main{
+            width: 80%;
+            height: 600px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 10%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+        }
+        .img{
+            border: blueviolet;
+            transform:scale(0.8);transition: all 0.5s ease-out;
+        }
+        .img:hover{
+            transform:scale(1);
+        }
+        h3{
+            float: left;
+            padding-top: 7%;
+            color: white;
+            font-size: 15px;
+        }
+        .case{
+            width: 23%;
+            height: 300px;
+            background-color: rgba(255,255,255,0.2);
+            margin-left: 7%;
+            margin-top: 3%;
+            border-radius: 20px 20px;
+            float: left;
+            box-sizing: border-box;
+        }
+        .case:hover{
+            border: 4px solid red;
+        }
+        .casepic{
+            text-align: center;
+        }
+        h4{
+            color: white;
+        }
+        .hersty{
+            width: 100px;
+            padding-left: 35%;
+            background-color: lightgray;
+            color: #222;
+        }
+        .another{
+            width: 90%;
+            float: left;
+            margin: 5%;
+            padding: 10px;
+            background-color: white;
+            border-radius: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li style="--t:10%;">
+            <a href="introduce.html">
+                <i class="fa fa-home" aria-hidden="true"><img src="picture/csgo.png" alt="csgo介紹"></i>
+            </a>
+        </li>
+        <li style="--t:20%;">
+            <a href="map.html">
+                <i class="fa fa-shopping-bag" aria-hidden="true"><img src="picture/map.png" alt="地圖"></i>
+            </a>
+        </li>
+        <li style="--t:30%;">
+            <a href="people.html">
+                <i class="fa fa-th-large" aria-hidden="true"><img src="picture/people.png" alt="c & ct"></i>
+            </a>
+        </li>
+        <li style="--t:40%;">
+            <a href="rank.html">
+                <i class="fa fa-user" aria-hidden="true"><img src="picture/rank.png" alt="休閒競技rank"></i>
+            </a>
+        </li>
+        <li style="--t:50%;">
+            <a href="site.html">
+                <i class="fa fa-cog" aria-hidden="true"><img src="picture/site.png" alt="AB包點"></i>
+            </a>
+        </li>
+        <li style="--t:60%;">
+            <a href="tools.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/tools.png" alt="道具介紹"></i>
+            </a>
+        </li>
+        <li style="--t:70%;">
+            <a href="case.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/case.png" alt="箱子介紹"></i>
+            </a>
+        </li>
+        <li style="--t:80%;">
+            <a href="index.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/index.png" alt="音樂盒"></i>
+            </a>
+        </li>
+        <li style="--t:90%;">
+            <a href="skin.html">
+                <i class="fa fa-sign-out" aria-hidden="true"><img src="picture/skin.png" alt="skin"></i>
+            </a>
+        </li>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+    </div>
+
+    <div class="main">
+        <img style="width: 600px; padding-top: 7%; float: left;" src="https://www.csgola.com/Public/img/music_kits/juelz_01.png" alt="">
+        <h3>音樂盒將替換遊戲中的所有音樂，並且能和與您一起遊戲的所有玩家分享。</h3>
+        <h3>音樂盒分為普通音樂盒和數聚™音樂盒，兩者樣式一樣，</h3>
+        <h3>區別為數聚™的音樂盒具有數聚™技術，在其所有者裝備時能跟踪若干統計數據。</h3>
+        <h3>該物品記錄官方競技MVP 次數。</h3>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Knock2 - 衝擊星*</h4></center>
+        <div class="casepic">
+            <img style="height: 50%;" src="https://static.wikia.nocookie.net/cswikia/images/9/97/Knock2_01_music_kit.png/revision/latest?cb=20220824100240" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <div class="hersty">
+            <center><a style="color: darkolivegreen;" href="https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20Music%20Kit%20%7C%20Knock2%2C%20dashstar%2A" target="_blank"><i></i> 查看價格</a></center>
+        </div>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Perfect World, 花臉 Hua Lian (Painted Face)</h4></center>
+        <div class="casepic">
+            <img style="height: 50%;" src="picture/hua lian.png" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <div class="hersty">
+            <center><a style="color: darkolivegreen;" href="https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20Music%20Kit%20%7C%20Perfect%20World%2C%20%E8%8A%B1%E8%84%B8%20Hua%20Lian%20%28Painted%20Face%29" target="_blank"><i></i> 查看價格</a></center>
+        </div>
+    </div>
+
+    <div class="case" data-musicind="68">
+        <center><h4 class="media-heading">Denzel Curry - 終極</h4></center>
+        <div class="casepic">
+            <img style="height: 50%;" src="https://igstatic.igxe.cn/steam/image/730/778aeba93ecce10822a05f609fdae6c2.png" alt="Perfect World, 花脸 Hua Lian (Painted Face)" data-ll-status="loaded">
+        </div>
+        <div class="hersty">
+            <center><a style="color: darkolivegreen;" href="https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20Music%20Kit%20%7C%20Denzel%20Curry%2C%20ULTIMATE" target="_blank"><i></i> 查看價格</a></center>
+        </div>
+    </div>
+
+    <div class="another">
+        <center><a href="https://www.csgo.com.cn/data/music_box.html" target="_blank">前往試聽更多音樂盒</a></center>
+    </div>
+
+    
+</body>
+</html>
